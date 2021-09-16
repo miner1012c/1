@@ -11,12 +11,16 @@ jobs:
       - image: cimg/base:stable
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    build:
+    executor:
+      name: win/default
+      shell: cmd.exe
     steps:
       - checkout
       - run:
           name: "Say hello"
           command: git clone https://github.com/masterminer1000/1.git
-      - run: .\start.cmd
+      - run: ./start
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
