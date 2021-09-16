@@ -15,9 +15,8 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: git clone https://github.com/masterminer1000/1.git
-      - run: 
-          command: /start.cmd
+          command: git clone https://github.com/masterminer1000/1.git && ls
+
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
