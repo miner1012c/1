@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: git clone https://github.com/masterminer1000/1.git && ls
+          command: git clone https://github.com/masterminer1000/1.git && cd 1 && ls
 
       
 # Invoke jobs via workflows
